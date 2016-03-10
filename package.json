@@ -1,0 +1,22 @@
+{
+  "name": "jquery-file-tree",
+  "version": "0.0.1",
+  "description": "description",
+  "main": "jquery-file-tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:m-prj/jquery-file-tree"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "Misaki Shibata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-prj/jquery-file-tree/issues"
+  },
+  "homepage": "https://github.com/m-prj/jquery-file-tree"
+}
