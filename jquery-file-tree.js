@@ -22,12 +22,12 @@ module.exports = new(function() {
                 var ff = dir + f;
                 var stats = fs.statSync(ff)
                 if (stats.isDirectory()) {
-                    f = f.replace(/ /g, "%20");
+                    // f = f.replace(/ /g, "%20");
                     ff = ff.replace(/ /g, "%20");
                     r += '<li class="directory collapsed"><a href="#" rel="' + ff + '/">' + f + '</a></li>';
                 } else {
                     var e = $(f.split('.')).last()[0];
-                    f = f.replace(/ /g, "%20");
+                    // f = f.replace(/ /g, "%20");
                     ff = ff.replace(/ /g, "%20");
                     r += '<li class="file ext_' + e + '"><a href="#" rel="' + ff + '">' + f + '</a></li>';
                 }
