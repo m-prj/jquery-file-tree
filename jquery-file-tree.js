@@ -62,7 +62,8 @@ module.exports = new(function() {
                     // 下層を追加
                     var path = $currentTarget.attr('rel');
                     
-                    $('#consolePanel .layer-panel.is-current textarea')[0].value += path + " を選択しました。\n";
+                    //$('#consolePanel .layer-panel.is-current textarea')[0].value += path + " を選択しました。\n";
+                    Console.appendMsg(path + " を選択しました。");
                     
                     $currentTarget.after(getDirList(path)).eventPathClick();
                 }
@@ -74,12 +75,14 @@ module.exports = new(function() {
                 }
             });
             $('.file > a[href="#"]').off('click').on('click', function (e) {
-                $('#consolePanel .layer-panel.is-current textarea')[0].value += $(e.currentTarget).attr('rel') + " を選択しました。\n";
+                //$('#consolePanel .layer-panel.is-current textarea')[0].value += $(e.currentTarget).attr('rel') + " を選択しました。\n";
+                Console.appendMsg($(e.currentTarget).attr('rel') + " を選択しました。");
                 loadFile(e);
             });
         };
         $('.file > a[href="#"]').off('click').on('click', function (e) {
             $('#consolePanel .layer-panel.is-current textarea')[0].value += $(e.currentTarget).attr('rel') + " を選択しました。\n";
+            Console.appendMsg($(e.currentTarget).attr('rel') + " を選択しました。");
             loadFile(e);
         });
         $(target).append(getDirList(dirPath)).eventPathClick();
